@@ -13,7 +13,10 @@ namespace KeyToInoApp
         {
             InitializeComponent();
             UpdatePortsComboBox(comboBoxPort);
-            comboBoxPort.SelectedIndex = 0;
+            if(comboBoxPort.Items.Count > 0)
+            {
+                comboBoxPort.SelectedIndex = 0;
+            }
             comboBoxBaud.SelectedIndex = 6;
         }
 
