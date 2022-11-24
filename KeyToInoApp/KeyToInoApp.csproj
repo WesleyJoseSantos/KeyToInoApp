@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KeyToIno.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
