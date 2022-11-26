@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.textBoxKeyPressed = new System.Windows.Forms.TextBox();
-            this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.labelKeyPressed = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.labelBaud = new System.Windows.Forms.Label();
@@ -119,7 +117,7 @@
             this.comboBoxBaud.Name = "comboBoxBaud";
             this.comboBoxBaud.Size = new System.Drawing.Size(71, 21);
             this.comboBoxBaud.TabIndex = 2;
-            this.comboBoxBaud.SelectedIndexChanged += new System.EventHandler(this.comboBoxBaud_SelectedIndexChanged);
+            this.comboBoxBaud.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBaud_SelectedIndexChanged);
             // 
             // labelPort
             // 
@@ -140,8 +138,8 @@
             this.comboBoxPort.Name = "comboBoxPort";
             this.comboBoxPort.Size = new System.Drawing.Size(71, 21);
             this.comboBoxPort.TabIndex = 2;
-            this.comboBoxPort.SelectedIndexChanged += new System.EventHandler(this.comboBoxPort_SelectedIndexChanged);
-            this.comboBoxPort.MouseEnter += new System.EventHandler(this.comboBoxPort_MouseEnter);
+            this.comboBoxPort.SelectedIndexChanged += new System.EventHandler(this.ComboBoxPort_SelectedIndexChanged);
+            this.comboBoxPort.MouseEnter += new System.EventHandler(this.ComboBoxPort_MouseEnter);
             // 
             // buttonConnect
             // 
@@ -152,7 +150,7 @@
             this.buttonConnect.TabIndex = 3;
             this.buttonConnect.Text = "Connect";
             this.buttonConnect.UseVisualStyleBackColor = true;
-            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
+            this.buttonConnect.Click += new System.EventHandler(this.ButtonConnect_Click);
             // 
             // labelStatus
             // 
@@ -171,14 +169,11 @@
             this.ClientSize = new System.Drawing.Size(230, 164);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KeyToIno";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyUp);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -188,7 +183,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBoxKeyPressed;
-        private System.IO.Ports.SerialPort serialPort;
         private System.Windows.Forms.Label labelKeyPressed;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label labelBaud;
